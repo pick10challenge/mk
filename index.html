@@ -34,7 +34,8 @@
 </a>
 
 <script>
-   while (true) {
+   setInterval(test(), 100);
+   function test() {
       if (window.innerHeight > window.innerWidth) {
          document.getElementById("link").style.width = "95%";
          document.getElementById("link").style.height = "auto";
