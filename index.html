@@ -20,7 +20,6 @@
     background-position: 50%;
   }
   .logo {
-    width: 80%;
     height: auto;
   }
 </style>
@@ -30,9 +29,19 @@
   <table width="100%" height="100%" cellpadding="0" cellspacing="0">
     <tr>
       <td align="center" valign="middle">
-        <img src="IMG_7577.png" class="logo">
+        <img src="IMG_7577.png" id="link" class="logo">
       </td>
     </tr>
   </table>
 </div>
 </a>
+
+<script>
+   while (true) {
+      if (window.innerHeight > window.innerWidth) {
+         document.getElementById("link").style.width = "95%";
+      } else {
+         document.getElementById("link").style.width = "80%";
+      }
+   }
+</script>
