@@ -19,9 +19,6 @@
     background-size: cover;
     background-position: 50%;
   }
-  .logo {
-    height: auto;
-  }
 </style>
 
 <a href="register.html">
@@ -40,8 +37,10 @@
    while (true) {
       if (window.innerHeight > window.innerWidth) {
          document.getElementById("link").style.width = "95%";
+         document.getElementById("link").style.height = "auto";
       } else {
          document.getElementById("link").style.width = "80%";
+         document.getElementById("link").style.height = "auto";
       }
    }
 </script>
