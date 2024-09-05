@@ -106,6 +106,16 @@
 
 <script>
   howManySelected = 0;
+  slotOne = 0;
+  slotTwo = 0;
+  slotThree = 0;
+  slotFour = 0;
+  slotFive = 0;
+  slotSix = 0;
+  slotSeven = 0;
+  slotEight = 0;
+  slotNine = 0;
+  slotTen = 0;
   function toggle() {
     Number = event.target.id;
     elementPressed = event.target;
@@ -114,8 +124,29 @@
       howManySelected -= 1;
     } else {
       if (howManySelected != 10) {
-      elementPressed.style.opacity = "1";
-      howManySelected += 1;
+        elementPressed.style.opacity = "1";
+        howManySelected += 1;
+        if (slotOne == 0) {
+          slotOne = parseInt(Number);
+        } else if (slotTwo == 0) {
+          slotTwo = parseInt(Number);
+        } else if (slotThree == 0) {
+          slotThree = parseInt(Number);
+        } else if (slotFour == 0) {
+          slotFour = parseInt(Number);
+        } else if (slotFive == 0) {
+          slotFive = parseInt(Number);
+        } else if (slotSix == 0) {
+          slotSix = parseInt(Number);
+        } else if (slotSeven == 0) {
+          slotSeven = parseInt(Number);
+        } else if (slotEight == 0) {
+          slotEight = parseInt(Number);
+        } else if (slotNine == 0) {
+          slotNine = parseInt(Number);
+        } else if (slotTen == 0) {
+          slotTen = parseInt(Number);
+        } else {}
       }
     }
   }
