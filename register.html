@@ -79,7 +79,7 @@
     position: absolute;
     z-index: 2000;
     overflow-x: hidden;
-    opacity: 0.7;
+    opacity: 0.5;
   }
   .corner {
     position: fixed;
@@ -110,7 +110,7 @@
     Number = event.target.id;
     elementPressed = event.target;
     if (elementPressed.style.opacity == "1") {
-      elementPressed.style.opacity = "0.7";
+      elementPressed.style.opacity = "0.5";
       howManySelected -= 1;
     } else {
       if (howManySelected != 10) {
