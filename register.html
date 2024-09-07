@@ -136,68 +136,88 @@
 
 <script>
   howManySelected = 0;
-  slotOne = 0;
-  slotTwo = 0;
-  slotThree = 0;
-  slotFour = 0;
-  slotFive = 0;
-  slotSix = 0;
-  slotSeven = 0;
-  slotEight = 0;
-  slotNine = 0;
-  slotTen = 0;
+  slotOne = "00";
+  slotTwo = "00";
+  slotThree = "00";
+  slotFour = "00";
+  slotFive = "00";
+  slotSix = "00";
+  slotSeven = "00";
+  slotEight = "00";
+  slotNine = "00";
+  slotTen = "00";
   function toggle() {
     Number = event.target.id;
     elementPressed = event.target;
     if (elementPressed.style.opacity == "1") {
       elementPressed.style.opacity = "0.5";
       howManySelected -= 1;
-      if (slotOne == parseInt(Number)) {
-          slotOne = 0;
-        } else if (slotTwo == parseInt(Number)) {
-          slotTwo = 0;
-        } else if (slotThree == parseInt(Number)) {
-          slotThree = 0;
-        } else if (slotFour == parseInt(Number)) {
-          slotFour = 0;
-        } else if (slotFive == parseInt(Number)) {
-          slotFive = 0;
-        } else if (slotSix == parseInt(Number)) {
-          slotSix = 0;
-        } else if (slotSeven == parseInt(Number)) {
-          slotSeven = 0;
-        } else if (slotEight == parseInt(Number)) {
-          slotEight = 0;
-        } else if (slotNine == parseInt(Number)) {
-          slotNine = 0;
-        } else if (slotTen == parseInt(Number)) {
-          slotTen = 0;
+      if (slotOne == Number) {
+          slotOne = "00";
+        } else if (slotTwo == Number) {
+          slotTwo = "00";
+        } else if (slotThree == Number) {
+          slotThree = "00";
+        } else if (slotFour == Number) {
+          slotFour = "00";
+        } else if (slotFive == Number) {
+          slotFive = "00";
+        } else if (slotSix == Number) {
+          slotSix = "00";
+        } else if (slotSeven == Number) {
+          slotSeven = "00";
+        } else if (slotEight == Number) {
+          slotEight = "00";
+        } else if (slotNine == Number) {
+          slotNine = "00";
+        } else if (slotTen == Number) {
+          slotTen = "00";
         } else {}
+        document.getElementById("s1").src = "team".concat(slotOne, ".png");
+        document.getElementById("s2").src = "team".concat(slotTwo, ".png");
+        document.getElementById("s3").src = "team".concat(slotThree, ".png");
+        document.getElementById("s4").src = "team".concat(slotFour, ".png");
+        document.getElementById("s5").src = "team".concat(slotFive, ".png");
+        document.getElementById("s6").src = "team".concat(slotSix, ".png");
+        document.getElementById("s7").src = "team".concat(slotSeven, ".png");
+        document.getElementById("s8").src = "team".concat(slotEight, ".png");
+        document.getElementById("s9").src = "team".concat(slotNine, ".png");
+        document.getElementById("s10").src = "team".concat(slotTen, ".png");
     } else {
       if (howManySelected != 10) {
         elementPressed.style.opacity = "1";
         howManySelected += 1;
         if (slotOne == 0) {
-          slotOne = parseInt(Number);
+          slotOne = Number;
         } else if (slotTwo == 0) {
-          slotTwo = parseInt(Number);
+          slotTwo = Number;
         } else if (slotThree == 0) {
-          slotThree = parseInt(Number);
+          slotThree = Number;
         } else if (slotFour == 0) {
-          slotFour = parseInt(Number);
+          slotFour = Number;
         } else if (slotFive == 0) {
-          slotFive = parseInt(Number);
+          slotFive = Number;
         } else if (slotSix == 0) {
-          slotSix = parseInt(Number);
+          slotSix = Number;
         } else if (slotSeven == 0) {
-          slotSeven = parseInt(Number);
+          slotSeven = Number;
         } else if (slotEight == 0) {
-          slotEight = parseInt(Number);
+          slotEight = Number;
         } else if (slotNine == 0) {
-          slotNine = parseInt(Number);
+          slotNine = Number;
         } else if (slotTen == 0) {
-          slotTen = parseInt(Number);
+          slotTen = Number;
         } else {}
+        document.getElementById("s1").src = "team".concat(slotOne, ".png");
+        document.getElementById("s2").src = "team".concat(slotTwo, ".png");
+        document.getElementById("s3").src = "team".concat(slotThree, ".png");
+        document.getElementById("s4").src = "team".concat(slotFour, ".png");
+        document.getElementById("s5").src = "team".concat(slotFive, ".png");
+        document.getElementById("s6").src = "team".concat(slotSix, ".png");
+        document.getElementById("s7").src = "team".concat(slotSeven, ".png");
+        document.getElementById("s8").src = "team".concat(slotEight, ".png");
+        document.getElementById("s9").src = "team".concat(slotNine, ".png");
+        document.getElementById("s10").src = "team".concat(slotTen, ".png");
       }
     }
   }
