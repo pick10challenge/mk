@@ -195,30 +195,30 @@
   function dropDown() {
     top = document.getElementById("s".concat(event.target.id.substring(4)));
     if (event.target.value == "0") {
-      document.getElementById(top.src.substring(4)).style.opacity = "0.5";
-      if (slotOne == document.getElementById(top.src.substring(4))) {
+      document.getElementById(top.src.substring(4, 5)).style.opacity = "0.5";
+      if (slotOne == document.getElementById(top.src.substring(4, 5))) {
           slotOne = "00";
-        } else if (slotTwo == document.getElementById(top.src.substring(4))) {
-          slotTwo = "00";
-        } else if (slotThree == document.getElementById(top.src.substring(4))) {
+        } else if (slotTwo == document.getElementById(top.src.substring(4, 5))) {
+          slotTwo = "00";,
+        } else if (slotThree == document.getElementById(top.src.substring(4, 5))) {
           slotThree = "00";
-        } else if (slotFour == document.getElementById(top.src.substring(4))) {
+        } else if (slotFour == document.getElementById(top.src.substring(4, 5))) {
           slotFour = "00";
-        } else if (slotFive == document.getElementById(top.src.substring(4))) {
+        } else if (slotFive == document.getElementById(top.src.substring(4, 5))) {
           slotFive = "00";
-        } else if (slotSix == document.getElementById(top.src.substring(4))) {
+        } else if (slotSix == document.getElementById(top.src.substring(4, 5))) {
           slotSix = "00";
-        } else if (slotSeven == document.getElementById(top.src.substring(4))) {
+        } else if (slotSeven == document.getElementById(top.src.substring(4, 5))) {
           slotSeven = "00";
-        } else if (slotEight == document.getElementById(top.src.substring(4))) {
+        } else if (slotEight == document.getElementById(top.src.substring(4, 5))) {
           slotEight = "00";
-        } else if (slotNine == document.getElementById(top.src.substring(4))) {
+        } else if (slotNine == document.getElementById(top.src.substring(4, 5))) {
           slotNine = "00";
-        } else if (slotTen == document.getElementById(top.src.substring(4))) {
+        } else if (slotTen == document.getElementById(top.src.substring(4, 5))) {
           slotTen = "00";
         } else {}
     } else {
-      document.getElementById(top.src.substring(4)).style.opacity = "1";
+      document.getElementById(top.src.substring(4, 5)).style.opacity = "1";
       if (event.target.id.substring(4) == "1") {
           slotOne = event.target.value;
         } else if (event.target.id.substring(4) == "2") {
