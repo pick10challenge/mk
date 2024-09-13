@@ -162,23 +162,6 @@
 </style>
 
 <script>
-
-  for (a = 0; a < 10; a++) {
-    el = document.getElementById("drop".concat((a + 1).toString()));
-    for (i = 0; i < 64; i++) {
-      var opt = document.createElement('option');
-      opt.value = (i + 1).toString();
-      opt.innerHTML = (window["se".concat((i + 1).toString())])[0]
-      opt.id = "opt".concat((a + 1).toString(), ".", (i + 1).toString());
-      el.appendChild(opt);
-    }
-  }
-
-
-
-
-  
-
   howManySelected = 0;
   slotOne = "00";
   slotTwo = "00";
@@ -263,6 +246,16 @@
         document.getElementById("s9").src = "team".concat(slotNine, ".png");
         document.getElementById("s10").src = "team".concat(slotTen, ".png");
       }
+    }
+  }
+  for (a = 0; a < 10; a++) {
+    el = document.getElementById("drop".concat((a + 1).toString()));
+    for (i = 0; i < 64; i++) {
+      var opt = document.createElement('option');
+      opt.value = (i + 1).toString();
+      opt.innerHTML = (window["se".concat((i + 1).toString())])[0]
+      opt.id = "opt".concat((a + 1).toString(), ".", (i + 1).toString());
+      el.appendChild(opt);
     }
   }
 </script>
