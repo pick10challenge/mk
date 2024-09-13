@@ -191,7 +191,6 @@
   slotEight = "00";
   slotNine = "00";
   slotTen = "00";
-  try {
   function dropDown() {
     top = document.getElementById("s".concat(event.target.id.substring(4)));
     if (event.target.value == "0") {
@@ -246,11 +245,6 @@
     } else {
       top.src = "team0".concat(event.target.value, ".png");
     }
-  }
-  dropDown();
-  } 
-  catch (err) {
-    document.getElementById("test").innerHTML = err.message;
   }
   function toggle() {
     Number = event.target.id;
