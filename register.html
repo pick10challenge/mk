@@ -85,6 +85,7 @@
 <img onclick="toggle()" style="left: 84.05vw; top: 247.25vw" id="64" src="team64.png" class="team">
 <img src="IMG_7766.png" class="background">
 
+<p id="test" style="color: white">Just not working. :("</p>
 <select id="drop1">
 </select>
 <select id="drop2">
@@ -247,15 +248,24 @@
         document.getElementById("s10").src = "team".concat(slotTen, ".png");
       }
     }
-  }
+  } 
+  var testThing = document.getElementById("test");
   for (let a = 0; a < 10; a++) {
+    testThing.innerHTML = "1";
     el = document.getElementById("drop".concat((a + 1).toString()));
+    testThing.innerHTML = "2";
     for (let i = 0; i < 64; i++) {
+      testThing.innerHTML = "3";
       var opt = document.createElement('option');
+      testThing.innerHTML = "4";
       opt.value = (i + 1).toString();
+      testThing.innerHTML = "5";
       opt.innerHTML = (window["se".concat((i + 1).toString())])[0]
+      testThing.innerHTML = "6";
       opt.id = "opt".concat((a + 1).toString(), ".", (i + 1).toString());
+      testThing.innerHTML = "7";
       el.appendChild(opt);
+      testThing.innerHTML = "8";
     }
   }
 </script>
