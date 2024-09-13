@@ -85,7 +85,7 @@
 <img onclick="toggle()" style="left: 84.05vw; top: 247.25vw" id="64" src="team64.png" class="team">
 <img src="IMG_7766.png" class="background">
 
-
+<p style="color: white" id="test">uhh</p>
 <select onchange="dropDown()" class="select" style="left: 2.27vw" id="drop1">
   <option value="0" disabled selected>Choice 1</option>
 </select>
@@ -191,6 +191,7 @@
   slotEight = "00";
   slotNine = "00";
   slotTen = "00";
+  try {
   function dropDown() {
     top = document.getElementById("s".concat(event.target.id.substring(4)));
     if (event.target.value == "0") {
@@ -245,6 +246,10 @@
     } else {
       top.src = "team0".concat(event.target.value, ".png");
     }
+  }
+  } 
+  catch (err) {
+    document.getElementById("test").innerHTML = err.message;
   }
   function toggle() {
     Number = event.target.id;
