@@ -248,9 +248,9 @@
       }
     }
   }
-  for (a = 0; a < 10; a++) {
+  for (let a = 0; a < 10; a++) {
     el = document.getElementById("drop".concat((a + 1).toString()));
-    for (i = 0; i < 64; i++) {
+    for (let i = 0; i < 64; i++) {
       var opt = document.createElement('option');
       opt.value = (i + 1).toString();
       opt.innerHTML = (window["se".concat((i + 1).toString())])[0]
