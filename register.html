@@ -249,6 +249,7 @@
       }
     }
   } 
+  se1 = "Team 01";
   var testThing = document.getElementById("test");
   for (let a = 0; a < 10; a++) {
     testThing.innerHTML = "1";
@@ -260,7 +261,7 @@
       testThing.innerHTML = "4";
       opt.value = (i + 1).toString();
       testThing.innerHTML = "5";
-      opt.innerHTML = (window["se".concat((i + 1).toString())])[0]
+      opt.innerHTML = (window["se".concat((i + 1).toString())]);
       testThing.innerHTML = "6";
       opt.id = "opt".concat((a + 1).toString(), ".", (i + 1).toString());
       testThing.innerHTML = "7";
