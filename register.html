@@ -159,7 +159,7 @@
     z-index: 1;
     overflow-x: hidden;
   }
-  select { z-index: 2; }
+  select { z-index: 100; }
   body { margin:0; }
 </style>
 
@@ -316,21 +316,18 @@
   se64 = "Team 64";
   var testThing = document.getElementById("test");
   for (let a = 0; a < 10; a++) {
-    testThing.innerHTML = "1";
     el = document.getElementById("drop".concat((a + 1).toString()));
-    testThing.innerHTML = "2";
+    var opt = document.createElement('option');
+    opt.value = "0";
+    opt.innerHTML = "Choice ".concat((a + 1).toString());
+    opt.id = "opt".concat((a + 1).toString(), ".0");
+    el.appendChild(opt);
     for (let i = 0; i < 64; i++) {
-      testThing.innerHTML = "3";
       var opt = document.createElement('option');
-      testThing.innerHTML = "4";
       opt.value = (i + 1).toString();
-      testThing.innerHTML = "5";
       opt.innerHTML = (window["se".concat((i + 1).toString())]);
-      testThing.innerHTML = "6";
       opt.id = "opt".concat((a + 1).toString(), ".", (i + 1).toString());
-      testThing.innerHTML = "7";
       el.appendChild(opt);
-      testThing.innerHTML = "8";
     }
   }
 </script>
