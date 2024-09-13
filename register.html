@@ -86,35 +86,35 @@
 <img src="IMG_7766.png" class="background">
 
 
-<select class="select" style="left: 2.27vw" id="drop1">
-  <option value="" disabled selected>Choice 1</option>
+<select onchange="dropDown()" class="select" style="left: 2.27vw" id="drop1">
+  <option value="0" disabled selected>Choice 1</option>
 </select>
-<select class="select" style="left: 12.04vw" id="drop2">
-  <option value="" disabled selected>Choice 2</option>
+<select onchange="dropDown()"  class="select" style="left: 12.04vw" id="drop2">
+  <option value="0" disabled selected>Choice 2</option>
 </select>
-<select class="select" style="left: 21.81vw" id="drop3">
-  <option value="" disabled selected>Choice 3</option>
+<select onchange="dropDown()"  class="select" style="left: 21.81vw" id="drop3">
+  <option value="0" disabled selected>Choice 3</option>
 </select>
-<select class="select" style="left: 31.58vw" id="drop4">
-  <option value="" disabled selected>Choice 4</option>
+<select onchange="dropDown()"  class="select" style="left: 31.58vw" id="drop4">
+  <option value="0" disabled selected>Choice 4</option>
 </select>
-<select class="select" style="left: 41.35vw" id="drop5">
-  <option value="" disabled selected>Choice 5</option>
+<select onchange="dropDown()"  class="select" style="left: 41.35vw" id="drop5">
+  <option value="0" disabled selected>Choice 5</option>
 </select>
-<select class="select" style="left: 51.12vw" id="drop6">
-  <option value="" disabled selected>Choice 6</option>
+<select onchange="dropDown()"  class="select" style="left: 51.12vw" id="drop6">
+  <option value="0" disabled selected>Choice 6</option>
 </select>
-<select class="select" style="left: 60.89vw" id="drop7">
-  <option value="" disabled selected>Choice 7</option>
+<select onchange="dropDown()"  class="select" style="left: 60.89vw" id="drop7">
+  <option value="0" disabled selected>Choice 7</option>
 </select>
-<select class="select" style="left: 70.66vw" id="drop8">
-  <option value="" disabled selected>Choice 8</option>
+<select onchange="dropDown()"  class="select" style="left: 70.66vw" id="drop8">
+  <option value="0" disabled selected>Choice 8</option>
 </select>
-<select class="select" style="left: 80.43vw" id="drop9">
-  <option value="" disabled selected>Choice 9</option>
+<select onchange="dropDown()"  class="select" style="left: 80.43vw" id="drop9">
+  <option value="0" disabled selected>Choice 9</option>
 </select>
-<select class="select" style="left: 90.2vw" id="drop10">
-  <option value="" disabled selected>Choice 10</option>
+<select onchange="dropDown()"  class="select" style="left: 90.2vw" id="drop10">
+  <option value="0" disabled selected>Choice 10</option>
 </select>
 
 <style>
@@ -191,6 +191,62 @@
   slotEight = "00";
   slotNine = "00";
   slotTen = "00";
+  function dropDown() {
+    if (event.target.value = "0") {
+      document.getElementById(top.src.substring(4)).style.opacity = "0.5";
+      if (slotOne == document.getElementById(top.src.substring(4))) {
+          slotOne = "00";
+        } else if (slotTwo == document.getElementById(top.src.substring(4))) {
+          slotTwo = "00";
+        } else if (slotThree == document.getElementById(top.src.substring(4))) {
+          slotThree = "00";
+        } else if (slotFour == document.getElementById(top.src.substring(4))) {
+          slotFour = "00";
+        } else if (slotFive == document.getElementById(top.src.substring(4))) {
+          slotFive = "00";
+        } else if (slotSix == document.getElementById(top.src.substring(4))) {
+          slotSix = "00";
+        } else if (slotSeven == document.getElementById(top.src.substring(4))) {
+          slotSeven = "00";
+        } else if (slotEight == document.getElementById(top.src.substring(4))) {
+          slotEight = "00";
+        } else if (slotNine == document.getElementById(top.src.substring(4))) {
+          slotNine = "00";
+        } else if (slotTen == document.getElementById(top.src.substring(4))) {
+          slotTen = "00";
+        } else {}
+    } else {
+      document.getElementById(top.src.substring(4)).style.opacity = "1";
+      if (event.target.id.substring(4) == "1") {
+          slotOne = event.target.value;
+        } else if (event.target.id.substring(4) == "2") {
+          slotTwo = event.target.value;
+        } else if (event.target.id.substring(4) == "3") {
+          slotThree = event.target.value;
+        } else if (event.target.id.substring(4) == "4") {
+          slotFour = event.target.value;
+        } else if (event.target.id.substring(4) == "5") {
+          slotFive = event.target.value;
+        } else if (event.target.id.substring(4) == "6") {
+          slotSix = event.target.value;
+        } else if (event.target.id.substring(4) == "7") {
+          slotSeven = event.target.value;
+        } else if (event.target.id.substring(4) == "8") {
+          slotEight = event.target.value;
+        } else if (event.target.id.substring(4) == "9") {
+          slotNine = event.target.value;
+        } else if (event.target.id.substring(4) == "10") {
+          slotTen = event.target.value;
+        } else {}
+    }
+    if (event.target.value.length = 2) {
+      top = document.getElementById("s".concat(event.target.id.substring(4)));
+      top.src = "team".concat(event.target.value, ".png");
+    } else {
+      top = document.getElementById("s".concat(event.target.id.substring(4)));
+      top.src = "team0".concat(event.target.value, ".png");
+    }
+  }
   function toggle() {
     Number = event.target.id;
     elementPressed = event.target;
@@ -199,34 +255,34 @@
       howManySelected -= 1;
       if (slotOne == Number) {
           slotOne = "00";
-          document.getElementById("drop1").value = "";
+          document.getElementById("drop1").value = "0";
         } else if (slotTwo == Number) {
           slotTwo = "00";
-          document.getElementById("drop2").value = "";
+          document.getElementById("drop2").value = "0";
         } else if (slotThree == Number) {
           slotThree = "00";
-          document.getElementById("drop3").value = "";
+          document.getElementById("drop3").value = "0";
         } else if (slotFour == Number) {
           slotFour = "00";
-          document.getElementById("drop4").value = "";
+          document.getElementById("drop4").value = "0";
         } else if (slotFive == Number) {
           slotFive = "00";
-          document.getElementById("drop5").value = "";
+          document.getElementById("drop5").value = "0";
         } else if (slotSix == Number) {
           slotSix = "00";
-          document.getElementById("drop6").value = "";
+          document.getElementById("drop6").value = "0";
         } else if (slotSeven == Number) {
           slotSeven = "00";
-          document.getElementById("drop7").value = "";
+          document.getElementById("drop7").value = "0";
         } else if (slotEight == Number) {
           slotEight = "00";
-          document.getElementById("drop8").value = "";
+          document.getElementById("drop8").value = "0";
         } else if (slotNine == Number) {
           slotNine = "00";
-          document.getElementById("drop9").value = "";
+          document.getElementById("drop9").value = "0";
         } else if (slotTen == Number) {
           slotTen = "00";
-          document.getElementById("drop10").value = "";
+          document.getElementById("drop10").value = "0";
         } else {}
         document.getElementById("s1").src = "team".concat(slotOne, ".png");
         document.getElementById("s2").src = "team".concat(slotTwo, ".png");
