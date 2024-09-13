@@ -192,6 +192,7 @@
   slotNine = "00";
   slotTen = "00";
   function dropDown() {
+    top = document.getElementById("s".concat(event.target.id.substring(4)));
     if (event.target.value = "0") {
       document.getElementById(top.src.substring(4)).style.opacity = "0.5";
       if (slotOne == document.getElementById(top.src.substring(4))) {
@@ -240,10 +241,8 @@
         } else {}
     }
     if (event.target.value.length = 2) {
-      top = document.getElementById("s".concat(event.target.id.substring(4)));
       top.src = "team".concat(event.target.value, ".png");
     } else {
-      top = document.getElementById("s".concat(event.target.id.substring(4)));
       top.src = "team0".concat(event.target.value, ".png");
     }
   }
