@@ -85,6 +85,27 @@
 <img onclick="toggle()" style="left: 84.05vw; top: 247.25vw" id="64" src="team64.png" class="team">
 <img src="IMG_7766.png" class="background">
 
+<select id="drop1">
+</select>
+<select id="drop2">
+</select>
+<select id="drop3">
+</select>
+<select id="drop4">
+</select>
+<select id="drop5">
+</select>
+<select id="drop6">
+</select>
+<select id="drop7">
+</select>
+<select id="drop8">
+</select>
+<select id="drop9">
+</select>
+<select id="drop10">
+</select>
+
 <style>
   .background {
     width: 100%;
@@ -141,6 +162,23 @@
 </style>
 
 <script>
+
+  for (i = 0; i < 10; i++) {
+    el = document.getElementById("drop".concat((i + 1).toString()));
+    for (i = 0; i < 64; i++) {
+      var opt = document.createElement('option');
+      opt.value = (i + 1).toString();
+      opt.innerHTML = (window["se".concat((i + 1).toString())])[0]
+      opt.id = 
+      el.appendChild(opt);
+    }
+  }
+
+
+
+
+  
+
   howManySelected = 0;
   slotOne = "00";
   slotTwo = "00";
